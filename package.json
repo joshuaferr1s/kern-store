@@ -1,0 +1,20 @@
+{
+  "name": "kern-store",
+  "version": "1.0.0",
+  "description": "A website and desktop application designed for YMCA Camp Kern to manage their camp store during summer camp.",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuaferr1s/kern-store.git"
+  },
+  "author": {
+    "name": "Joshua Ferris",
+    "email": "jajjferris@gmail.com",
+    "url": "https://jajjferris@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joshuaferr1s/kern-store/issues"
+  },
+  "homepage": "https://github.com/joshuaferr1s/kern-store#readme"
+}
