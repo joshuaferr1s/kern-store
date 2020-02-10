@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/joshuaferr1s/kern-store/issues"
   },
-  "homepage": "https://github.com/joshuaferr1s/kern-store#readme"
+  "homepage": "https://github.com/joshuaferr1s/kern-store#readme",
+  "dependencies": {
+    "concurrently": "^5.1.0"
+  }
 }
