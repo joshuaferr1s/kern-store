@@ -5,7 +5,8 @@
 
 * [x] Eslint
 * [] Server Framework
-  * [] koa, koa-router, koa-helmet, koa-body, @koa/cors, koa-logger
+  * [x] koa, koa-router, koa-helmet, koa-body, @koa/cors, koa-logger
+  * [] basic api
 * [] Authentication
   * [] Password sent
   * [] JWT Returned (12 hours)
