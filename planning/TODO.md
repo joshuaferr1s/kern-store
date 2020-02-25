@@ -7,10 +7,10 @@
 * [x] Server Framework
   * [x] koa, koa-router, koa-helmet, koa-body, @koa/cors, koa-logger
   * [x] basic api
-* [] Authentication
-  * [] Password sent
-  * [] JWT Returned (12 hours)
-  * [] Verify middleware for operations below
+* [x] Authentication
+  * [x] Password sent
+  * [x] JWT Returned (12 hours)
+  * [x] Verify middleware for operations below
 * [] Campers Operations
   * [] Add a camper
   * [] Remove a camper

@@ -3,6 +3,9 @@ const Router = require('koa-router');
 const helmet = require('koa-helmet');
 const koaBody = require('koa-body');
 const logger = require('koa-logger');
+require('dotenv').config();
+
+const auth = require('./routes/auth');
 
 const app = new Koa();
 const router = new Router();
@@ -36,6 +39,8 @@ router.get('/', (ctx, next) => {
     'msg': 'Hello World!',
   };
 });
+
+router.use('/auth', auth.routes(), auth.allowedMethods());
 
 app.use(router.routes()).use(router.allowedMethods());
 
