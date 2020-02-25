@@ -11,6 +11,9 @@
   * [x] Password sent
   * [x] JWT Returned (12 hours)
   * [x] Verify middleware for operations below
+* [] Database
+  * [] monk as mongodb driver
+  * [] connection file
 * [] Campers Operations
   * [] Add a camper
   * [] Remove a camper
