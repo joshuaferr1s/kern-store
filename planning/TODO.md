@@ -3,7 +3,7 @@
 ## Server
 ![](./server-database.png)
 
-* [] Eslint
+* [x] Eslint
 * [] Server Framework
   * [] koa, koa-router, koa-helmet, koa-body, @koa/cors, koa-logger
 * [] Authentication
