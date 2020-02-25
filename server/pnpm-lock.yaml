@@ -1,5 +1,4 @@
 dependencies:
-  '@koa/cors': 3.0.0
   koa: 2.11.0
   koa-body: 4.1.1
   koa-helmet: 5.2.0
@@ -91,14 +90,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-jBD+G8+LWpMBBWvVcdr4QysjUE4mU/syrhN17o1u3gx0/WzJB1kwiVZAXRtWbsIPOwW8pF/YJV5+nmetPzepXg==
-  /@koa/cors/3.0.0:
-    dependencies:
-      vary: 1.1.2
-    dev: false
-    engines:
-      node: '>= 8.0.0'
-    resolution:
-      integrity: sha512-hDp+cXj6vTYSwHRJfiSpnf5dTMv3FmqNKh1or9BPJk4SHOviHnK9GoL9dT0ypt/E+hlkRkZ9edHylcosW3Ghrw==
   /@types/events/3.0.0:
     dev: false
     resolution:
@@ -2111,7 +2102,6 @@ packages:
     resolution:
       integrity: sha512-faQrqNMzcPCHGVC2aaOINk13K+aaBDUPjGWl0teOXywElLjyVAB6Oe2jj62jHYtwsU49jXhScYbvPENK+6zAvQ==
 specifiers:
-  '@koa/cors': ^3.0.0
   babel-eslint: ^10.0.3
   eslint: ^6.8.0
   koa: ^2.11.0
