@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Server for the YMCA Camp Kern Canteen",
   "main": "src/index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joshuaferr1s/kern-store.git"
@@ -17,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/joshuaferr1s/kern-store/issues"
   },
-  "homepage": "https://github.com/joshuaferr1s/kern-store#readme"
+  "homepage": "https://github.com/joshuaferr1s/kern-store#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
 }
