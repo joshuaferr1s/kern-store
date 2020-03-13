@@ -6,6 +6,7 @@ const logger = require('koa-logger');
 require('dotenv').config();
 
 const auth = require('./routes/auth');
+const fileRoute = require('./routes/file');
 
 const app = new Koa();
 const router = new Router();
@@ -41,6 +42,7 @@ router.get('/', (ctx, next) => {
 });
 
 router.use('/auth', auth.routes(), auth.allowedMethods());
+router.use('/file', fileRoute.routes(), fileRoute.allowedMethods());
 
 app.use(router.routes()).use(router.allowedMethods());
 
