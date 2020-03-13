@@ -14,6 +14,12 @@
 * [x] Database
   * [x] monk as mongodb driver
   * [x] connection file
+* [] File Upload Endpoint
+  * [] Accept file upload
+  * [] Check if it is .csv file
+  * [] for every record upload the camper
+  * [] Delete old campers
+  * [] If camper already exists update or create
 * [] Campers Operations
   * [] Add a camper
   * [] Remove a camper
