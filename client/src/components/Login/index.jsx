@@ -55,7 +55,7 @@ const Login = () => {
         <>
           <Typography>Enter the password below to gain access</Typography>
           <form className={classes.form} onSubmit={loginAttempt}>
-            <TextField className={classes.textField} label="Password" variant="outlined" value={password} onChange={e => setPassword(e.target.value)} />
+            <TextField className={classes.textField} label="Password" variant="outlined" value={password} onChange={e => setPassword(e.target.value)} type="password" />
           </form>
         </>
       )}
