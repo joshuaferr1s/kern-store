@@ -14,6 +14,7 @@ const port = process.env.PORT || 3000;
 
 app.use(async (ctx, next) => {
   ctx.set('Access-Control-Allow-Origin', '*');
+  ctx.set('Access-Control-Allow-Headers', 'Authorization, Content-Type');
   await next();
 });
 app.use(helmet());

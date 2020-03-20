@@ -14,6 +14,9 @@ const verify = async (ctx, next) => {
     jwt.verify(authHeader.split(' ')[1], process.env.TOKEN_SECRET);
     await next();
   } catch (error) {
+    if (error.name === 'JsonWebTokenError') {
+      return ctx.throw(401, 'Invalid Stored Credentials', error);
+    }
     ctx.throw(401, 'Unauthorized!', error);
   }
 };

@@ -2,6 +2,8 @@ const Router = require('koa-router');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
+const { verify } = require('../../middlewares');
+
 const auth = new Router();
 
 auth.post('/', async (ctx) => {
@@ -20,6 +22,12 @@ auth.post('/', async (ctx) => {
   ctx.body = {
     status: 200,
     token,
+  };
+});
+
+auth.get('/verify', verify, async (ctx) => {
+  ctx.body = {
+    status: 200,
   };
 });
 
