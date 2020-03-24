@@ -2,7 +2,9 @@
   "name": "kern-store",
   "version": "1.0.0",
   "description": "A website and desktop application designed for YMCA Camp Kern to manage their camp store during summer camp.",
-  "scripts": {},
+  "scripts": {
+    "start": "concurrently \"cd server && npm run dev\" \"cd client && npm start\""
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joshuaferr1s/kern-store.git"
