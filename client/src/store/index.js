@@ -17,5 +17,39 @@ export default createStore({
       state.open = payload;
     }),
   },
+  camperDialog: {
+    open: false,
+    setOpen: action((state, payload) => {
+      state.open = payload;
+    }),
+  },
+  campers: {
+    campers: [
+      {
+        _id: '1',
+        name: 'Joshua Ferris',
+        bunk: 'Elk Lodge',
+        program: 'Boots N Bits',
+        balance: 100.00,
+        transactionHistory: [],
+      },
+      {
+        _id: '2',
+        name: 'Ren Ferris',
+        bunk: 'Cabin 13',
+        program: 'TOK',
+        balance: 50,
+        transactionHistory: [],
+      },
+      {
+        _id: '3',
+        name: 'Melissa Huist-Kneer',
+        bunk: 'Yurts',
+        program: 'Theme Camp',
+        balance: 0,
+        transactionHistory: [],
+      },
+    ],
+  },
 }, /* preloadedState, */
 +  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
