@@ -32,6 +32,11 @@ export default createStore({
         program: 'Boots N Bits',
         balance: 100.00,
         transactionHistory: [],
+        chosenActivities: {
+          '1': '',
+          '2': '',
+          '3': '',
+        },
       },
       {
         _id: '2',
@@ -40,6 +45,11 @@ export default createStore({
         program: 'TOK',
         balance: 50,
         transactionHistory: [],
+        chosenActivities: {
+          '1': '',
+          '2': '',
+          '3': '',
+        },
       },
       {
         _id: '3',
@@ -48,8 +58,23 @@ export default createStore({
         program: 'Theme Camp',
         balance: 0,
         transactionHistory: [],
+        chosenActivities: {
+          '1': '',
+          '2': '',
+          '3': '',
+        },
       },
     ],
+    updateCamper: action((state, payload) => {
+      const newCampers = state.campers.map((camper) => {
+        if (camper._id === payload._id) {
+          return { ...camper, ...payload.newData };
+        } else {
+          return camper;
+        }
+      });
+      state.campers = newCampers;
+    }),
   },
 }, /* preloadedState, */
 +  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());

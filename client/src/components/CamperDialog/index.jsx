@@ -16,13 +16,12 @@ import CloseIcon from '@material-ui/icons/Close';
 
 import useStyles from './styles';
 
-const CamperDialog = ({ camper }) => {
+const CamperDialog = ({ camperId }) => {
   const classes = useStyles();
   const open = useStoreState(state => state.camperDialog.open);
+  const camper = useStoreState(state => state.campers.campers.find(el => el._id === camperId) || {});
   const setOpen = useStoreActions(actions => actions.camperDialog.setOpen);
-  const [ah1, setAh1] = React.useState('');
-  const [ah2, setAh2] = React.useState('');
-  const [ah3, setAh3] = React.useState('');
+  const updateCamper = useStoreActions(actions => actions.campers.updateCamper);
 
   return (
     <Dialog fullScreen open={open} onClose={() => setOpen(false)}>
@@ -68,8 +67,8 @@ const CamperDialog = ({ camper }) => {
                     <InputLabel id="activity-hour-1">Activity Hour 1</InputLabel>
                     <Select
                       labelId="activity-hour-1"
-                      value={ah1}
-                      onChange={e => setAh1(e.target.value)}
+                      value={camper.chosenActivities ? camper.chosenActivities['1'] : ''}
+                      onChange={e => updateCamper({ _id: camper._id, newData: {chosenActivities: { ...camper.chosenActivities, '1': e.target.value } }})}
                     >
                       <MenuItem value="Swimming">Swimming</MenuItem>
                       <MenuItem value="Climbing">Climbing</MenuItem>
@@ -84,8 +83,8 @@ const CamperDialog = ({ camper }) => {
                     <InputLabel id="activity-hour-2">Activity Hour 2</InputLabel>
                     <Select
                       labelId="activity-hour-2"
-                      value={ah2}
-                      onChange={e => setAh2(e.target.value)}
+                      value={camper.chosenActivities ? camper.chosenActivities['2'] : ''}
+                      onChange={e => updateCamper({ _id: camper._id, newData: {chosenActivities: { ...camper.chosenActivities, '2': e.target.value } }})}
                     >
                       <MenuItem value="Swimming">Swimming</MenuItem>
                       <MenuItem value="Climbing">Climbing</MenuItem>
@@ -100,8 +99,8 @@ const CamperDialog = ({ camper }) => {
                     <InputLabel id="activity-hour-3">Activity Hour 3</InputLabel>
                     <Select
                       labelId="activity-hour-3"
-                      value={ah3}
-                      onChange={e => setAh3(e.target.value)}
+                      value={camper.chosenActivities ? camper.chosenActivities['3'] : ''}
+                      onChange={e => updateCamper({ _id: camper._id, newData: {chosenActivities: { ...camper.chosenActivities, '3': e.target.value } }})}
                     >
                       <MenuItem value="Swimming">Swimming</MenuItem>
                       <MenuItem value="Climbing">Climbing</MenuItem>

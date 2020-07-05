@@ -21,14 +21,14 @@ const Dashboard = () => {
   const [campers, setCampers] = React.useState(allCampers);
   const [village, setVillage] = React.useState('');
   const villages = ['Theme Camp', 'Boots N Bits', 'TOK', 'Pioneer'];
-  const [camper, setCamper] = React.useState({});
+  const [camperId, setCamperId] = React.useState({});
 
   React.useEffect(() => {
     setCampers(allCampers.filter(c => c.program.includes(village)));
   }, [village, allCampers]);
 
   const openCamperMenu = (camper) => {
-    setCamper(camper);
+    setCamperId(camper._id);
     setOpen(true);
   };
 
@@ -80,7 +80,7 @@ const Dashboard = () => {
           </List>
         </Grid>
       </Grid>
-      <CamperDialog camper={camper} />
+      <CamperDialog camperId={camperId} />
     </Container>
   );
 };
